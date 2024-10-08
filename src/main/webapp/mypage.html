@@ -41,7 +41,17 @@
 		<div class="clear"></div>
 
 		<div class="menu">
-			<a href="#dungeon">ダンジョン</a>
+			<form action="DungeonServlet" method="POST">
+				<input type="hidden" name="name" value="田中">
+				<input type="hidden" name="id" value="00001">
+				<input type="hidden" name="hp" value="10000000">
+				<input type="hidden" name="attack" value="1">
+				<input type="hidden" name="defense" value="1">
+				<input type="hidden" name="speed" value="1">
+				<input type="hidden" name="item" value="あまのさかほこ">
+				<input type="hidden" name="itemEffect" value="攻撃力とすばやさを2倍にする">
+				<button type="submit">ダンジョン</button>
+			</form>
 			<a href="#training">道場</a>
 			<a href="#ranking">ランキング</a>
 		</div>
