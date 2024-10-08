@@ -10,7 +10,7 @@ body {
     border: 2px solid white;
     padding: 20px;
     overflow: hidden;
-    position: relative; /* 絶対配置の基準となる */
+    position: relative; 
 }
 
 .header {

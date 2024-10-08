@@ -32,7 +32,6 @@ public class dungeonServlet extends HttpServlet {
         String item = request.getParameter("item");
         String itemEffect = request.getParameter("itemEffect");
 
-        // リクエスト属性にデータをセット
         request.setAttribute("name", name);
         request.setAttribute("id", id);
         request.setAttribute("hp", hp);
@@ -42,7 +41,6 @@ public class dungeonServlet extends HttpServlet {
         request.setAttribute("item", item);
         request.setAttribute("itemEffect", itemEffect);
 
-        // JSPにフォワード
         RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/dungeon.jsp");
         dispatcher.forward(request, response);
     }

@@ -1,81 +1,147 @@
 @charset "UTF-8";
 
-/* 背景設定 */
+/* コンテナの基本設定。左右のパディングを設定し、中央揃えにしている */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* 背景カスタム設定。画面全体に背景画像を表示し、コンテンツを中央に揃える */
 .bg-custom {
-	background-image: url('/Dosukoi-Analytics/画像/ネオン.png');
-	/* 背景画像の絶対パス */
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	background-image: url('../画像/ネオン.png'); /* 背景画像を設定 */
+	background-size: cover;                      /* 画像が画面全体を覆うようにする */
+	background-position: center;                 /* 画像の中心を基準に配置 */
+	height: 100vh;                               /* ビューポートの高さ全体を占める */
+	display: flex;                               /* フレックスボックスで子要素を整列 */
+	justify-content: center;                     /* 子要素を中央揃え */
+	align-items: center;                         /* 垂直方向に中央揃え */
+	flex-direction: column;                      /* 子要素を縦方向に配置 */
+	position: relative;                          /* 絶対配置の要素を親要素に対して相対配置 */
 }
 
-/* タイトルのスタイル */
-.level-title {
-	font-size: 3rem;
-	color: white;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-	margin-bottom: 10px;
+/* 階層タイトルのスタイル設定 */
+.level-title, .pcname, .npcname {
+	font-size: 3rem;                             /* フォントサイズを大きく（3rem）設定 */
+	color: white;                                /* 文字色を白に設定 */
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 黒色の影を付けて読みやすくする */
+	margin-bottom: 10px;                         /* タイトル下に10pxの余白を設定 */
 }
 
-img {
-	width: 200px;
-	height: 200px;
-	border: 2px solid white;
+.pcname, .npcname{
+	width: 50%;
+	float: left;
 }
 
-.character-img {
-	width: 150px;
-	height: auto;
+.container{
+    width: 100vw;
+    height: 100vh;
 }
 
-/* ステータス表示のスタイル */
-.stats {
-	background-color: rgba(0, 0, 0, 0.7);
-	color: white;
-	padding: 10px;
-	margin-top: 10px;
-	border-radius: 5px;
-	text-align: left;
-	font-size: 1.2rem;
+/* プレイヤーキャラクターとNPC（敵）の共通設定 */
+.pc, .npc {
+    width: 40%; /* 各要素の幅を40%に設定 */
+    height: 60%;
+    overflow: hidden; /* 子要素がはみ出さないように設定 */
+    margin-top: 5%;
 }
 
-/* ボタンのスタイル */
-.btn {
-	margin: 10px;
-	width: 150px;
+.pc{
+	float: left;
 }
 
+.npc{
+	float: right;
+}
+
+ .pccharacter, .npccharacter{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* プレイヤーキャラクターとNPCのステータス表示エリア */
+.pcstats, .npcstats  {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
+    color: white;                         /* 文字色を白に設定 */
+    padding: 10px;                        /* 内側の余白を10pxに設定 */
+    margin: 10px;                     /* 上部に10pxの余白を追加 */
+    border-radius: 5px;                   /* 角を丸める */
+    text-align: left;                     /* 左揃え */
+    font-size: 1.2rem;                    /* フォントサイズを1.2remに設定 */
+    width: 60%;                           /* ステータスの幅を60%に設定 */
+    box-sizing: border-box;               /* パディングを含めた幅を指定 */
+    clear: both;
+}
+
+.pcstats{
+	float: right;
+}
+
+.npcstats{
+	float: left;
+}
+
+
+/* 共通画像設定 */
+.pccharacter-img, .npccharacter-img {
+    width: 45%;  /* 幅を150pxに設定 */
+    height: 45%;  /* 高さは自動調整 */
+    border: 2px solid white; /* 白色の枠線を追加 */
+    margin-left: 10px;
+}
+
+.pccharacter-img{
+	float: right;
+}
+
+.npccharacter-img{
+	float: left;
+}
+
+/* clearfixの追加: floatが適用された要素を正しく認識させる */
+.pc::after, .npc::after {
+    content: "";
+    display: table;
+    clear: both; /* 親要素の高さを自動調整 */
+}
+
+/* ボタンを画面下部に配置 */
+.row.mt-4 {
+    position: absolute; /* 絶対配置を使用 */
+    bottom: 20px;       /* 画面下部から20px離して配置 */
+    left: 50%;          /* 左側から50%の位置に配置（中央揃え） */
+    transform: translateX(-50%); /* 要素を中央揃えするために-50%移動 */
+    width: 100%;        /* 全幅を使用 */
+    text-align: center; /* 中央揃え */
+}
+
+/* ボタンの基本設定 */
+.row.mt-4 .btn {
+    margin: 0 10px;     /* ボタン間に10pxのスペースを確保 */
+    display: inline-block; /* ボタンを横並びに配置 */
+    width: 150px;        /* ボタンの幅を150pxに設定 */
+}
+
+/* プライマリボタン（青色）のスタイル */
 .btn-primary {
-	background-color: #007bff;
-	border-color: #007bff;
+    background-color: #007bff; /* ボタンの背景色を青色に設定 */
+    border-color: #007bff;     /* 枠線の色を青色に設定 */
 }
 
+/* セカンダリボタン（灰色）のスタイル */
 .btn-secondary {
-	background-color: #6c757d;
-	border-color: #6c757d;
+    background-color: #6c757d; /* ボタンの背景色を灰色に設定 */
+    border-color: #6c757d;     /* 枠線の色を灰色に設定 */
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-	.character-img {
-		width: 100px;
-	}
-
-	.stats {
-		font-size: 1rem;
-	}
-
-	.level-title {
-		font-size: 2rem;
-	}
-}
-
+/* 音楽コントロールボタンの位置 */
 .music-control {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+    position: absolute; /* 絶対配置 */
+    top: 10px;          /* 画面上部から10px離して配置 */
+    right: 10px;        /* 画面右側から10px離して配置 */
 }
