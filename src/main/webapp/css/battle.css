@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/* バトルメッセージのスタイル設定 */
+.battle-message {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid white;
+    text-align: left;
+}
+
+/* ボタンの基本スタイル（黒背景・白文字に統一） */
+button, .btn {
+    background-color: #000; /* 黒 */
+    color: #fff; /* 白文字 */
+    border: 2px solid #fff; /* 白枠 */
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/* ボタンホバー時のスタイル（黒背景に薄い白がかかる） */
+button:hover, .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* ホバー時は薄い白に変化 */
+    transform: translateY(-3px); /* ホバー時に少し浮かせる */
+}
+
+/* 特定のボタン（バトルコントロールやマイページに戻るボタンなど）も統一 */
+.battle-controls .btn,
+.result-back-button,
+.result-buttons .btn {
+    background-color: #000; /* 黒背景 */
+    color: #fff; /* 白文字 */
+    border: 2px solid #fff; /* 白枠 */
+}
+
+.battle-controls .btn:hover,
+.result-back-button:hover,
+.result-buttons .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* ホバー時は薄い白に */
+    transform: translateY(-3px); /* ホバー時に少し浮かせる */
+}
+
+/* バトルオプションのスタイル */
+.battle-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.battle-option {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.battle-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* バトルログのスタイル */
+.battle-log {
+    padding: 10px;
+    background-color: black;
+    border: 1px solid white;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.battle-log ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.battle-log li {
+    padding: 5px 0;
+    font-size: 1.2rem;
+}
+
+/* コンテナの横幅設定 */
+.container.text-center {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* キャラクターのヘッダー設定 */
+.character-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* 画像のボックス設定 */
+.character-img-box {
+    margin-left: 20px;
+    text-align: center;
+}
+
+/* 背景カスタム設定 */
+.bg-custom {
+    background: url('../画像/ネオン.png') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/* 音楽コントロールボタンの位置 */
+.music-control {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1; /* 音楽ボタンが背景に隠れないようにする */
+}
+
+/* タイトルとキャラクター名のスタイル設定 */
+.level-title {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.character-name {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+/* キャラクター情報のレイアウト */
+.character-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 5px;
+    padding: 0 50px;
+    gap: 30px;
+}
+
+.character {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid #fff;
+}
+
+.character-img {
+    width: 200px;
+    height: auto;
+    margin: 15px auto;
+    display: block;
+}
+
+.character-stats {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+}
+
+/* バトルコントロールボタンの設定（黒と白で統一） */
+.battle-controls {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.battle-controls .btn {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.battle-controls .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+/* バトルログの設定 */
+.battle-log {
+    padding: 10px;
+    background-color: black;
+    border: 1px solid white;
+    height: 150px;
+    overflow-y: auto;
+}
+
+/* バトル結果表示オーバーレイ */
+.battle-result-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.result-message {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    border: 3px solid #fff;
+    text-align: center;
+}
+
+.result-buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    gap: 20px;
+}
+
+.result-back-button {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.result-back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.result-buttons .btn {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.result-buttons .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
