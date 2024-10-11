@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+    overflow: hidden; 
+    padding: 10px;
+}
+
+.avatar-section, .status {
+    padding: 10px;
+    width: 30%; 
+    box-sizing: border-box; 
+    margin-right: 2%;
+    text-align: center;
+}
+
+.avatar-section img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+}
+
+.status_child{
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.subject {
+    float: right; 
+}
