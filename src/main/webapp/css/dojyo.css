@@ -11,7 +11,7 @@ body {
 
 .avatar-section, .status {
     padding: 10px;
-    width: 30%; 
+    width: 20%; 
     box-sizing: border-box; 
     margin-right: 2%;
     text-align: center;
@@ -30,4 +30,5 @@ body {
 
 .subject {
     float: right; 
+    border: 2px solid white;
 }
