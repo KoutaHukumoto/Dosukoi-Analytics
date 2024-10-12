@@ -197,7 +197,7 @@ function specialAttack() {
             npcHP -= playerAttack;
             const specialAttackLog = document.createElement('li');
             battleLog.appendChild(specialAttackLog);
-            displayTextOneByOne(specialAttackLog, `あなたの必死技！ スライムに ${playerAttack} のダメージ！`, function() {
+            displayTextOneByOne(specialAttackLog, `あなたの必殺技！ スライムに ${playerAttack} のダメージ！`, function() {
                 npcImgElement.classList.add('shake'); // 敵がダメージを受けて揺れる演出
                 setTimeout(function() {
                     npcImgElement.classList.remove('shake');
@@ -251,7 +251,7 @@ function specialAttack() {
 			<h2>VS</h2>
 
 			<div class="character-info">
-				<div class="character pc" style = "margin-right: 150px">
+				<div class="character pc" style = "margin-right: 50px">
 					<div class="character-stats">
 						<p>HP: ${hp}</p>
 						<p>攻撃: ${attack}</p>
@@ -269,7 +269,7 @@ function specialAttack() {
 					</div>
 				</div>
 
-				<div class="character npc" style = "margin-left: 150px">
+				<div class="character npc" style = "margin-left: 50px">
 					<div class="character-img-box">
 						<div class="character-header">
 							<p class="character-name">スライム</p>
