@@ -1,45 +1,67 @@
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+	background-color: black;
+	color: white;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 .header {
-    overflow: hidden; 
-    padding: 10px;
+	overflow: hidden;
+	padding: 10px;
 }
 
-.avatar-section, .status {
-    padding: 10px;
-    width: 20%; 
-    box-sizing: border-box; 
-    margin-right: 2%;
-    text-align: center;
+.container {
+	width: 80%;
+	margin: 0 auto;
+	border: 2px solid white;
+	padding: 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+.character {
+	float: left;
+}
+
+.avatar-section,
+.status {
+	box-sizing: border-box;
+	margin-right: 2%;
+	text-align: center;
 }
 
 .avatar-section img {
-    width: 200px;
-    height: 200px;
-    border: 2px solid white;
+	width: 200px;
+	height: 200px;
+	border: 2px solid white;
 }
 
-.status_child{
-    border: 2px solid white;
-    padding: 10px;
+.status_child {
+	width: 200px;
+	border: 2px solid white;
+	padding: 10px;
+	font-size: 1.1em;
 }
 
-.subject{
-	width: 80%;
+.subject {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .subject a {
-	width: 200px;
+	width: 400px;
 	text-align: center;
-    line-height: 50px;
-    margin-bottom: 10px;
-    padding:  10px;
-    border: 2px solid white;
+	line-height: 50px;
+	margin-bottom: 30px;
+	padding: 10px;
+	border: 2px solid white;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+
+.mypage {
+	margin-top: 20px;
+	padding: 10px;
+	border: 2px solid white;
+	width: 30%;
 }
