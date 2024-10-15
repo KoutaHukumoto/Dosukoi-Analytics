@@ -16,3 +16,7 @@ https://uxbear.me/tech-animejs-2/
 GitHubの用語説明（ここで分からない所があったら福本に聞いてください）
 
 https://liginc.co.jp/246190
+
+function(関数)についての説明
+
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Functions
