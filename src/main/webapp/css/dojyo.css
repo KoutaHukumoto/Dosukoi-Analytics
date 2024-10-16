@@ -60,8 +60,12 @@ body {
 }
 
 .mypage {
+	display: block;
+    text-align: center;
 	margin-top: 20px;
 	padding: 10px;
 	border: 2px solid white;
 	width: 30%;
+	font-size: 1.5em;
+	text-decoration: none;
 }
