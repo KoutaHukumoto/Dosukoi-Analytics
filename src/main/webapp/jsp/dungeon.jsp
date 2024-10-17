@@ -15,7 +15,6 @@
 		<div class="music-control">
 			<button id="playMusicBtn" class="btn btn-info" aria-label="音楽を再生または停止">🎵 音楽を停止</button>
 		</div>
-
 		<audio id="backgroundMusic" autoplay>
 			<source src="audio/Umbra.mp3" type="audio/mp3">
 		</audio>
