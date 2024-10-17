@@ -215,21 +215,3 @@
 	    typeChar();
 	}
 
-	function battledefence() {
-	    const playerHPElement = document.querySelector('.character.pc .character-header meter');
-	    const npcHPElement = document.querySelector('.character.npc .character-header meter');
-	    const battleLog = document.getElementById('battleLog');
-	    let playerHP = parseInt(playerHPElement.getAttribute('value'));
-	    const npcAttack = 10;
-
-	    const defenceLog = document.createElement('li');
-	    battleLog.appendChild(defenceLog);
-	    displayTextOneByOne(defenceLog, `あなたは防御した。スライムの攻撃を受けたがダメージが減る。`, function() {
-	        playerHP -= Math.floor(npcAttack / 2);
-	        if (playerHP <= 0) {
-	            playerHP = 0;
-	            displayBattleResult('敗北。。。');
-	        }
-	        playerHPElement.setAttribute('value', playerHP);
-	    });
-	}
