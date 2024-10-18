@@ -1,6 +1,10 @@
 # どすこいアナリティクス
 チーム開発
 
+GitHubのマージやプルについての解説
+
+http://www.y2sunlight.com/ground/doku.php?id=github:branch
+
 GitHubの簡単な操作説明
 
 https://yuta-iwase.github.io/doc/pdf/github_tutorial.pdf
