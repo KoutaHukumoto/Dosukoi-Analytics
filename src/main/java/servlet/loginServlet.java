@@ -2,6 +2,8 @@ package servlet;
 
 import java.io.IOException;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
