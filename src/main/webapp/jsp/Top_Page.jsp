@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ page import="model.account" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,8 +110,7 @@
             return true; // フォームを送信
         }
     </script>
-    <div class="main">
-     <div class="main2">
+	<form action="/dokoTsubu/Login" method="post">
         <div class="h1">
             <h1>9年後の君へ</h1>
         </div>
@@ -120,8 +122,7 @@
             <input type="password" name="pass" class="form-control">
             <p id="error-message" class="error">※IDまたはパスワードが間違っています。</p>
         </div>
-     </div>
-    </div>
+    </form>
         <div class="login_btn">
             <button type="button" onclick="if (validateForm()) { /* ここでフォームを送信する処理を書く */ }">ログイン</button>
         </div>
