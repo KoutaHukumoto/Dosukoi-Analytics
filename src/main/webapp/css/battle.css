@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /* バトルメッセージのスタイル設定 */
-<<<<<<< HEAD
 /* バトル中のメッセージの見た目を設定する部分です。黒い背景に白い文字を使っています。 */
 .battle-message {
     background-color: black; /* メッセージの背景色を黒にする */
@@ -341,7 +340,7 @@ button:hover, .btn:hover {
     transform-origin: left; /* ビームが左端から伸びたり縮んだりするように設定します。 */
     z-index: 1000; /* ビームが他の要素の上に表示されるようにします。 */
 }
-=======
+
 .battle-message {
     background-color: black;
     color: white;
@@ -620,4 +619,4 @@ button:hover, .btn:hover {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-3px);
 }
->>>>>>> refs/heads/main
+
